@@ -1,0 +1,8 @@
+function start() {
+    var element = document.getElementById("ball");
+    element.classList.toggle("Pause");
+
+    var element = document.getElementById("stage");
+    element.classList.toggle("Pause");
+    
+  }

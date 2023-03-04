@@ -1,0 +1,70 @@
+#stage {
+    height:300px;
+    border:1px solid #000;
+    overflow: hidden;
+    animation: sky-color 10s infinite;
+    animation-play-state:running;
+}
+#stage.Pause {
+  height:300px;
+  border:1px solid #000;
+  overflow: hidden;
+  animation: sky-color 10s infinite;
+  animation-play-state:paused;
+}
+#ball {
+    position:relative;
+    width:75px;
+    height:75px;
+    border-radius:50%;
+    /*
+    animation: [animation-name] [duration] [iteration-count] [animation-direction] [timing-function] [fill-mode] [delay];
+    */
+    animation:ball-move 10s infinite;
+    animation-play-state:running;
+}
+#ball.Pause {
+  position:relative;
+    width:75px;
+    height:75px;
+    border-radius:50%;
+    /*
+    animation: [animation-name] [duration] [iteration-count] [animation-direction] [timing-function] [fill-mode] [delay];
+    */
+    animation:ball-move 10s infinite;
+    animation-play-state: paused;
+}
+
+
+@keyframes ball-move {
+  0% {
+    top:90%;
+    left:95%;
+    background-color:red;
+  }
+  50% {
+    top:calc(25% - 75px); /* 100% down minus height of ball */
+    left:calc(50% - 75px); /* 50% across minus half width of ball */
+    background-color:yellow;
+  }
+  100% {
+    top:100%;
+    left:calc(5% - 75px);
+    background-color:orangered;
+  }
+}
+
+@keyframes sky-color{
+  0%{
+    background-color:#1c1341;
+  }
+  25%{
+    background-color:darkorange;
+  }
+  50%{
+    background-color:skyblue;
+  }
+  100%{
+    background-color:crimson;
+  }
+}
